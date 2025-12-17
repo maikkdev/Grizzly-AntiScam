@@ -1,15 +1,10 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-
 import requests
 import json
 import time
 from colorama import Fore, Style, init
 
-# Inicializar colorama
 init(autoreset=True)
 
-# ===== BANNER =====
 def banner():
     print(Fore.CYAN + "="*50)
     print(Fore.MAGENTA + Style.BRIGHT + "        GRIZZLY - WEBHOOK TOOL")
@@ -18,7 +13,6 @@ def banner():
 
 banner()
 
-# ===== USO RESPONSABLE E INSTRUCCIONES =====
 def instrucciones():
     print(Fore.YELLOW + Style.BRIGHT + "USO RESPONSABLE, EDUCATIVO Y TERMINOS LEGALES\n")
     
@@ -46,13 +40,11 @@ def instrucciones():
 
 instrucciones()
 
-# ===== Input de webhook =====
 WEBHOOK = input(Fore.YELLOW + "Webhook -> " + Fore.RESET).strip()
 if not WEBHOOK:
     print(Fore.RED + "Webhook invalida")
     exit()
 
-# ===== Funciones =====
 def ver_info():
     try:
         res = requests.get(WEBHOOK)
@@ -92,7 +84,7 @@ def enviar_mensaje():
 def enviar_spam():
     msg = input(Fore.YELLOW + "Enviar spam ->  " + Fore.RESET)
     print(Fore.CYAN + "\nEnviando spam...\n")
-    for i in range(1,21):  # envia 20 mensajes por defecto
+    for i in range(1,21):  # 20 x defecto
         try:
             requests.post(WEBHOOK, json={"content": msg})
             print(Fore.MAGENTA + f"[{i}/20] Enviado")
