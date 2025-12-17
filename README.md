@@ -15,7 +15,7 @@
 **💻 Instalación:**  
 1. Clona este repositorio: `git clone` y entra a la carpeta: `cd <CARPETA_DEL_REPOSITORIO>`  
 2. Instala las dependencias: `pip install -r requirements.txt`  
-3. Ejecuta el script: `python grizzly_webhook.py`
+3. Ejecuta el script: `python grizzly_antiS.py`
 
 **📖 Instrucciones de uso:**  
 - Ejecuta el script en **Python 3** (Linux, Termux, Windows)  
